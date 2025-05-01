@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #65965e;
+    color: #b18080;
+        margin: 0;
+    padding: 0;
+    
+  }
+  
+  main {
+    max-width: 600px;
+    height: 400px;
+    margin:auto ;
+    background: #000000cc;
+    padding-inline: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+  }
+
+  h1 {
+    text-align: center;
+    color: #ffb500;
+    min-width: 330px ;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    color: #ffffff;
+    margin: 10px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+  }
+  input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    resize: none;
+    background-color: #adadad;
+  }
+  button {
+    margin-top: 15px;
+    background-color: #e9dca4;
+    border-style: none;
+    border-radius: 5px;
+    height: 30px;
+  }
+  #applicationForm button {
+    background-color: #f0c400;
+  }
+  #applicationForm button:hover {
+    background-color: #443909;
+    color: #adadad;
+  }
+  .cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* Reset de base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    letter-spacing: 2px;
+  }
+  /* Mise en page générale */
+  body {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  /* Remplace la vidéo par une image de fond */
+.background-image {
+  background: url('./img/fond.png') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background-image .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 10%;
+}
+
+  /* Header */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Très important pour rester au-dessus de tout */
+    background: linear-gradient(-135deg,#796300,#644040) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+  header img {
+    height: 60px;
+    width: auto;
+  }
+  header img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+  }
+  /* Dropdown */
+  .dropdown {
+    position: relative; /* Assurez-vous que le menu se positionne par rapport à ce parent */
+  }
+  /* Hamburger (le bouton pour ouvrir le menu) */
+  .trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  .hamburger span {
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 5px;
+  }
+  /* Menu déroulant */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px; /* Positionne le menu sous l'icône hamburger */
+    left: -150px;
+    background:linear-gradient(-135deg,#f0c400,#5f6440);
+    box-shadow: 0 0 10px 10px #333;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgb(0, 0, 0);
+    width: 200px; /* Limite la largeur du menu */
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10000000; /* S'assure que le menu est au-dessus des autres éléments */
+  }
+  /* Lorsque le menu est ouvert */
+  .dropdown-content.open {
+    display: flex; /* Le menu devient visible */
+    animation: slideDown 0.3s ease-out;
+  }
+  /* Animation de l'ouverture du menu */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Boutons du menu */
+  .dropdown-content a {
+    color: #333;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family: "Cal Sans", sans-serif;
+  }
+  .dropdown-content button:hover {
+    background-color: #ffffff;
+  }
+  /* Style survolé pour l'icône hamburger */
+  .trigger:hover .hamburger span {
+    background-color: #ffb60c;
+  }
+  a {
+    text-decoration: none;
+    padding: 2px;
+    color: #000000;
+  }
+  .tout button a {
+    margin: -2px;
+  }
+  footer {
+    background:linear-gradient(-135deg,#f0c400,#644040);
+    color: #ffe48d91;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin: 0;
+    cursor: default;
+  }
+  .cursor-ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 50%;
+    pointer-events: none; /* la boule ne bloque pas les clics */
+    transform: translate(-40%, -20%);
+    transition: transform 0.05s ease-out;
+    z-index: 1000;
+  }
+  
